@@ -1,7 +1,6 @@
 use chrono::Duration;
 
 fn main() {
-    let _time = chrono::Local::now().format("%H%M%S").to_string();
     let treinta_minutos_mas = chrono::Local::now()
         .checked_add_signed(Duration::minutes(30))
         .expect("No se pudo calcular el dia")
