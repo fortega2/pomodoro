@@ -19,6 +19,8 @@ struct Pomodoro {
 fn cls() {
     if cfg!(target_os = "windows") {
         let _ = Command::new("cmd").args(["/C", "cls"]).status();
+    } else {
+        let _ = Command::new("sh").args(["-c", "clear"]).status();
     }
 }
 
